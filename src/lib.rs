@@ -176,11 +176,7 @@ pub trait CheckedCfg<'s> {
     /// This function will panic if the provided value is not assignable to the configuration, or the given key contains
     /// an invalid character.
     fn set_from_env(&self, variable_key: &str) {
-        match std::env::var(variable_key) {
-            Ok(value) if !value.is_empty() => self.set(Some(&value)),
-            Ok(_) | Err(VarError::NotPresent) => self.set(None),
-            Err(error) => panic!("{error}"),
-        }
+        self.set_from_env_or_else(variable_key, || None);
     }
 
     /// Sets the configuration for the current build from the given environment variable.
@@ -193,6 +189,8 @@ pub trait CheckedCfg<'s> {
     where
         D: FnOnce() -> Option<String>,
     {
+        println!("cargo::rerun-if-env-changed={variable_key}");
+
         match std::env::var(variable_key) {
             Ok(value) if !value.is_empty() => self.set(Some(&value)),
             Ok(_) | Err(VarError::NotPresent) => self.set(default().as_deref()),
