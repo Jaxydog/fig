@@ -1,18 +1,9 @@
-// SPDX-License-Identifier: LGPL-3.0-or-later
+// SPDX-License-Identifier: MPL-2.0
 //
 // Copyright © 2026 Jaxydog
 //
-// This file is part of Fig.
-//
-// Fig is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public
-// License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
-// version.
-//
-// Fig is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
-// of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License along with Fig. If not,
-// see <https://www.gnu.org/licenses/>.
+// This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+// If a copy of the MPL was not distributed with this project, you can obtain one at <http://mozilla.org/MPL/2.0/>.
 
 //! Provides a simple API for declaring custom `cfg` predicates at compile-time.
 

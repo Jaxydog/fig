@@ -8,7 +8,7 @@ keywords = ["cfg", "conditional-compilation", "config"]
 version = "0.1.0"
 rust-version = "1.85"
 edition = "2024"
-license = "LGPL-3.0-or-later"
+license = "MPL-2.0"
 readme = "README.md"
 repository = "https://github.com/Jaxydog/fig"
 
